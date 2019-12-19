@@ -1,0 +1,149 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* navbar */
+.navbar {
+  border-bottom: 1px solid #42c579;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #42c579;
+  background-image: linear-gradient(147deg, #42c579 25%, #247a1e 100%);
+}
+
+.navbar i, .navbar h1 {
+  margin: 1.2rem;
+}
+
+/* todo form */
+.new-todo-form {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  width: 17rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  border: 0px;
+  border-bottom: 2px solid black;
+}
+
+.new-todo-form::placeholder {
+  opacity: 0.2;
+}
+
+.form-button {
+  width: 4rem;
+  height: 3rem;
+  background: white;
+  border: 0px;
+  border-radius: 1rem;
+}
+
+.form-button:hover {
+  background: black;
+  color: white;
+}
+
+/* container */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* todo list container */
+.todo-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* todo item */
+.todo-item {
+  width: 30%;
+  height: 13rem;
+  margin: 1rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F3;
+}
+
+.todo-item h3 {
+  font-size: 1rem;
+  text-align: left;
+  margin: 1rem 2rem;
+}
+
+
+.todo-item.checked {
+  animation: Card-background 0.2s linear;
+  color: white;
+  background-color: #42c579;
+  background-image: linear-gradient(147deg, #42c579 25%, #247a1e 100%);
+}
+
+.check-right {
+  margin-top: 3rem;
+  margin-left: 12rem;
+}
+
+@media (max-width: 1100px) {
+  .todo-item {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .check-right {
+    align-self: center;
+    margin: 0 7rem;
+  }
+}
+
+@keyframes Card-background {
+  from {
+    background: #F6F6F3;;
+  }
+  to {
+    background: #42c579; 
+  }
+}
